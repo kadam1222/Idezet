@@ -1,6 +1,5 @@
 body{
     text-align: center;
-    align-items: center;
     background-color: gainsboro;
 }
 
@@ -17,5 +16,16 @@ body{
 }
 
 h1{
-    
+    padding-top: 20px;
+}
+
+#kedvenc{
+    background-color: orange;
+    color: white;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#balra{
+    margin-right:auto;
 }

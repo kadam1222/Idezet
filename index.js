@@ -33,13 +33,19 @@ const idezetek = [
 
 let idezet_div = document.getElementById("idezet_div");
 let fodiv = document.getElementById("fodiv");
+let kedvencdiv=document.createElement("div");
 
 let balra = document.createElement("button");
 balra.innerText="⬅"
+balra.id="balra"
 let jobbra = document.createElement("button");
 jobbra.innerText="➡"
+jobbra.id="jobbra"
 let kedvenc = document.createElement("button")
 kedvenc.innerText= "Kedvencekhez adás";
+kedvenc.id="kedvenc"
+let asd = document.createElement("h3");
+asd.innerText="Kedvenc idézetek:"
 
 let idezet= document.createElement("span");
 idezet.innerText=idezetek[0].idezet;
@@ -51,6 +57,7 @@ idezet_div.appendChild(szerzo)
 fodiv.appendChild(balra)
 fodiv.appendChild(kedvenc)
 fodiv.appendChild(jobbra)
+fodiv.appendChild(asd)
 
 let hely=0;
 jobbra.addEventListener("click",function(){
@@ -79,4 +86,11 @@ balra.addEventListener("click",function(){
         idezet.innerText=idezetek[hely].idezet
         szerzo.innerText="-" +idezetek[hely].szerzo
     }
+})
+
+kedvenc.addEventListener("click",function(){
+    let kedvencidez= document.createElement("p");
+    kedvencidez.innerText='"'+idezetek[hely].idezet+'" -' +idezetek[hely].szerzo;
+    fodiv.appendChild(kedvencidez)
+    
 })
