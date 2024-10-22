@@ -62,10 +62,7 @@ fodiv.appendChild(asd)
 let hely=0;
 jobbra.addEventListener("click",function(){
     if(hely==idezetek.length-1){
-        hely=0
-        idezet.innerText=idezetek[hely].idezet
-        szerzo.innerText="-" +idezetek[hely].szerzo
-        hely++
+        jobbra.disabled
     }
     else{
         hely++
@@ -76,10 +73,7 @@ jobbra.addEventListener("click",function(){
 
 balra.addEventListener("click",function(){
     if(hely==0){
-        hely=idezetek.length-1
-        idezet.innerText=idezetek[hely].idezet
-        szerzo.innerText="-" +idezetek[hely].szerzo
-        hely--
+        balra.disabled
     }
     else{
         hely--
