@@ -51,3 +51,32 @@ idezet_div.appendChild(szerzo)
 fodiv.appendChild(balra)
 fodiv.appendChild(kedvenc)
 fodiv.appendChild(jobbra)
+
+let hely=0;
+jobbra.addEventListener("click",function(){
+    if(hely==idezetek.length-1){
+        hely=0
+        idezet.innerText=idezetek[hely].idezet
+        szerzo.innerText="-" +idezetek[hely].szerzo
+        hely++
+    }
+    else{
+        hely++
+        idezet.innerText=idezetek[hely].idezet
+        szerzo.innerText="-" +idezetek[hely].szerzo
+    }
+})
+
+balra.addEventListener("click",function(){
+    if(hely==0){
+        hely=idezetek.length-1
+        idezet.innerText=idezetek[hely].idezet
+        szerzo.innerText="-" +idezetek[hely].szerzo
+        hely--
+    }
+    else{
+        hely--
+        idezet.innerText=idezetek[hely].idezet
+        szerzo.innerText="-" +idezetek[hely].szerzo
+    }
+})
